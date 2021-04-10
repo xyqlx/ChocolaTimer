@@ -1,0 +1,41 @@
+﻿<Window x:Class="ChocolaTimer.InputTimeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChocolaTimer"
+        mc:Ignorable="d" WindowStyle="None" ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner" MouseDoubleClick="Window_MouseDoubleClick"
+        Topmost="True"
+        Title="InputTimeWindow" SizeToContent="WidthAndHeight">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.Resources>
+            <Style TargetType="TextBlock">
+                <Setter Property="Margin" Value="10,5"></Setter>
+                <Setter Property="TextAlignment" Value="Center"></Setter>
+                <Setter Property="FontSize" Value="20"></Setter>
+            </Style>
+            <Style TargetType="TextBox">
+                <Setter Property="Margin" Value="2,5"></Setter>
+                <Setter Property="TextAlignment" Value="Left"></Setter>
+                <Setter Property="FontSize" Value="20"></Setter>
+                <Setter Property="MinWidth" Value="50"></Setter>
+            </Style>
+        </Grid.Resources>
+        <TextBlock Text="秒" Grid.Column="0" Grid.Row="0"></TextBlock>
+        <TextBlock Text="分钟" Grid.Column="0" Grid.Row="1"></TextBlock>
+        <TextBlock Text="小时" Grid.Column="0" Grid.Row="2"></TextBlock>
+        <TextBox x:Name="SecondTextBox" Grid.Column="1" Grid.Row="0" PreviewKeyDown="TextBox_PreviewKeyDown"></TextBox>
+        <TextBox x:Name="MinuteTextBox" Grid.Column="1" Grid.Row="1" PreviewKeyDown="TextBox_PreviewKeyDown"></TextBox>
+        <TextBox x:Name="HourTextBox" Grid.Column="1" Grid.Row="2" PreviewKeyDown="TextBox_PreviewKeyDown"></TextBox>
+    </Grid>
+</Window>
