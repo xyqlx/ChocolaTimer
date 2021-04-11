@@ -125,5 +125,10 @@ namespace ChocolaTimer
             window.Owner = this;
             window.Show();
         }
+
+        private void Exit(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

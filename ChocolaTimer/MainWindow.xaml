@@ -14,7 +14,7 @@
         MouseDoubleClick="Window_MouseDoubleClick"
         Topmost="True"
         Background="Transparent"
-        Title="MainWindow">
+        Title="Chocola Timer">
     <WindowChrome.WindowChrome>
         <WindowChrome GlassFrameThickness="-1" />
     </WindowChrome.WindowChrome>
@@ -23,6 +23,7 @@
             <MenuItem Header="{DynamicResource SetTime}" Click="SetTime"/>
             <MenuItem Header="{DynamicResource Reset}" Click="Reset"/>
             <MenuItem Header="{DynamicResource Reverse}" Click="Revert"/>
+            <MenuItem Header="{DynamicResource Exit}" Click="Exit"/>
         </ContextMenu>
     </Window.ContextMenu>
     <Grid Background="Transparent">

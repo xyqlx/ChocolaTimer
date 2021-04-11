@@ -10,6 +10,9 @@
     <sys:String x:Key="Reverse">
         反向
     </sys:String>
+    <sys:String x:Key="Exit">
+        退出
+    </sys:String>
     <sys:String x:Key="Second">
         秒
     </sys:String>
