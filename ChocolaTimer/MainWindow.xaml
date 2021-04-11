@@ -20,14 +20,14 @@
     </WindowChrome.WindowChrome>
     <Window.ContextMenu>
         <ContextMenu>
-            <MenuItem Header="限时" Click="SetTime"/>
-            <MenuItem Header="清零" Click="Reset"/>
-            <MenuItem Header="转向" Click="Revert"/>
+            <MenuItem Header="{DynamicResource SetTime}" Click="SetTime"/>
+            <MenuItem Header="{DynamicResource Reset}" Click="Reset"/>
+            <MenuItem Header="{DynamicResource Reverse}" Click="Revert"/>
         </ContextMenu>
     </Window.ContextMenu>
     <Grid Background="Transparent">
         <TextBlock x:Name="TimeTextBlock"
-                   FontSize="100" FontFamily="Digital-7 Mono" Foreground="#FF686868"
+                   FontSize="100" FontFamily="Digital-7 Mono" FontWeight="Normal" Foreground="#FF686868"
                    Background="Transparent"
                    Margin="10,0,10,0">00:00:00</TextBlock>
     </Grid>

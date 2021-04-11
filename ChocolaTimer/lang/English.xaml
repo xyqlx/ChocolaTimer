@@ -1,0 +1,22 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=System.Runtime">
+    <sys:String x:Key="SetTime">
+        Set countdown time
+    </sys:String>
+    <sys:String x:Key="Reset">
+        Reset
+    </sys:String>
+    <sys:String x:Key="Reverse">
+        Reverse
+    </sys:String>
+    <sys:String x:Key="Second">
+        Second
+    </sys:String>
+    <sys:String x:Key="Minute">
+        Minute
+    </sys:String>
+    <sys:String x:Key="Hour">
+        Hour
+    </sys:String>
+</ResourceDictionary>

@@ -31,9 +31,9 @@
                 <Setter Property="MinWidth" Value="50"></Setter>
             </Style>
         </Grid.Resources>
-        <TextBlock Text="秒" Grid.Column="0" Grid.Row="0"></TextBlock>
-        <TextBlock Text="分钟" Grid.Column="0" Grid.Row="1"></TextBlock>
-        <TextBlock Text="小时" Grid.Column="0" Grid.Row="2"></TextBlock>
+        <TextBlock Text="{DynamicResource Second}" Grid.Column="0" Grid.Row="0"></TextBlock>
+        <TextBlock Text="{DynamicResource Minute}" Grid.Column="0" Grid.Row="1"></TextBlock>
+        <TextBlock Text="{DynamicResource Hour}" Grid.Column="0" Grid.Row="2"></TextBlock>
         <TextBox x:Name="SecondTextBox" Grid.Column="1" Grid.Row="0" PreviewKeyDown="TextBox_PreviewKeyDown"></TextBox>
         <TextBox x:Name="MinuteTextBox" Grid.Column="1" Grid.Row="1" PreviewKeyDown="TextBox_PreviewKeyDown"></TextBox>
         <TextBox x:Name="HourTextBox" Grid.Column="1" Grid.Row="2" PreviewKeyDown="TextBox_PreviewKeyDown"></TextBox>
