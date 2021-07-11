@@ -1,0 +1,26 @@
+name: Release
+
+on: 
+  push:
+    tags:
+    - '*'
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v1.7.2
+        with:
+          dotnet-version: 3.1.x
+      - name: Install dependencies
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --configuration Release --no-restore
+      - name: Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "ChocolaTimer/bin/Release/netcoreapp3.1/ChocolaTimer.exe"
+          token: ${{ secrets.GITHUB_TOKEN }}
