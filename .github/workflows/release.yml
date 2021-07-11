@@ -19,8 +19,12 @@ jobs:
         run: dotnet restore
       - name: Build
         run: dotnet build --configuration Release --no-restore
+      - uses: papeloto/action-zip@v1
+        with:
+          files: ChocolaTimer/bin/Release/netcoreapp3.1/
+          dest: ChocolaTimer${{ env.RELEASE_VERSION }}.zip
       - name: Release
         uses: ncipollo/release-action@v1
         with:
-          artifacts: "ChocolaTimer/bin/Release/netcoreapp3.1/ChocolaTimer.exe"
+          artifacts: "*.zip"
           token: ${{ secrets.GITHUB_TOKEN }}
